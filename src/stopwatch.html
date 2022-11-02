@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./public/assets/icon.png">
+  <link rel="icon" href="../public/assets/icon.png">
   <title>Stopwatch</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../public/css/stopwatch.css">
@@ -21,34 +21,41 @@
   <!-- Content -->
   <section class="container w-full h-[80vh] mx-auto flex flex-col items-center justify-center gap-6">
     <div>
-      <h1 class="text-3xl tracking-[10px]">TIME IS RUNNING</h1>
+      <h1 class="text-3xl tracking-[10px]">STOPWATCH</h1>
     </div>
 
-    <div class="flex flex-row text-8xl font-medium items-center justify-center gap-8">
-      <div class="w-56 boxTime">
+    <div class="flex flex-row text-6xl font-medium items-center justify-center gap-6">
+      <div class="w-44 boxTime">
         <p id="hours">00</p>
       </div>
       <p>:</p>
-      <div class="w-56 boxTime">
+      <div class="w-44 boxTime">
         <p id="minutes">00</p>
       </div>
       <p>:</p>
-      <div class="w-56 boxTime">
+      <div class="w-44 boxTime">
         <p id="seconds">00</p>
+      </div>
+      <p>:</p>
+      <div class="w-44 boxTime">
+        <p id="tens">00</p>
       </div>
     </div>
 
     <div class="flex flex-row gap-12">
       <div class="circle mx-auto">
-        <i class="fa-solid fa-expand expand" id="expand" onclick="openFullscreen()"></i>
+        <i class="fa-solid fa-play expand" onclick="Start()"></i>
       </div>
       <div class="circle mx-auto">
-        <i class="fa-solid fa-compress expand" onclick="closeFullscreen()"></i>
+        <i class="fa-solid fa-pause expand" onclick="Stop()"></i>
+      </div>
+      <div class="circle mx-auto">
+        <i class="fa-solid fa-trash expand" onclick="Clear()"></i>
       </div>
     </div>
   </section>
 
   <!-- JS -->
-  <script src="./public/js/index.js"></script>
+  <script src="../public/js/stopwatch.js"></script>
 </body>
 </html>
